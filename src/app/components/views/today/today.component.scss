@@ -1,0 +1,42 @@
+@import '../../../../colors';
+
+:host {
+  overflow-y: scroll;
+  flex: 1;
+  margin-bottom: 50px;
+  padding: 0 20px;
+
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+    padding: 0 40px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding: 20px 0 10px;
+
+    @media(min-width: 768px) {
+      font-size: 26px;
+      padding: 40px 0 25px;
+    }
+  }
+
+  .date {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: $bar-bac;
+    padding: 10px;
+
+    @media(min-width: 768px) {
+      padding: 20px;
+    }
+  }
+}

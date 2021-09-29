@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "link": "home",
+      "displayName": "Home",
+      "name": "home",
+      "color": "#decbaa",
+      "id": "1"
+    },
+    {
+      "link": "work",
+      "displayName": "Work",
+      "name": "work",
+      "color": "#c55d5e",
+      "id": "2"
+    },
+    {
+      "link": "shopping",
+      "displayName": "Shopping",
+      "name": "shopping",
+      "color": "#6693a5",
+      "id": "3"
+    },
+    {
+      "link": "meetings",
+      "displayName": "Meetings",
+      "name": "meetings",
+      "color": "#747474",
+      "id": "4"
+    },
+    {
+      "link": "plants",
+      "displayName": "Plants",
+      "name": "plants",
+      "color": "#bccfbc",
+      "id": "nutPz96"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Angular Course",
+      "note": null,
+      "category": {
+        "name": "work",
+        "color": "#c55d5e"
+      },
+      "date": "10/11/2021",
+      "displayDate": "11/10/2021",
+      "id": "oxrNwRm"
+    },
+    {
+      "name": "Make a cake",
+      "note": null,
+      "category": {
+        "name": "home",
+        "color": "#decbaa"
+      },
+      "date": "10/02/2021",
+      "displayDate": "02/10/2021",
+      "id": "IfDikP8"
+    },
+    {
+      "name": "Repot plants",
+      "note": null,
+      "category": {
+        "name": "plants",
+        "color": "#bccfbc"
+      },
+      "date": "10/28/2021",
+      "displayDate": "28/10/2021",
+      "id": "SA_7qBM"
+    },
+    {
+      "name": "Julia's birthday party",
+      "note": null,
+      "category": {
+        "name": "meetings",
+        "color": "#747474"
+      },
+      "date": "10/03/2021",
+      "displayDate": "03/10/2021",
+      "id": "SLJpabs"
+    }
+  ]
+}

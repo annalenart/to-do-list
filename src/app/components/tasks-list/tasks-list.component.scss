@@ -1,0 +1,21 @@
+@import "/src/colors";
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+
+  @media(min-width: 768px) {
+    margin: 10px;
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: 2px solid $bar-bac;
+  }
+
+  .category {
+    font-size: 14px;
+    color: $light-gray-font;
+    margin-top: 5px;
+  }
+}

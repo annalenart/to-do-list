@@ -1,0 +1,25 @@
+<img class="back-btn" src="/assets/images/close_black_24dp.svg" alt="close-btn" width="40px" [routerLink]="['..']">
+<span class="title">New Task</span>
+<form class="form-container" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>New Task</mat-label>
+    <input matInput placeholder="Add new task" formControlName="name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Add note</mat-label>
+    <textarea matInput placeholder="Add note" formControlName="note"></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select formControlName="category">
+      <mat-option *ngFor="let category of categories$ | async" [value]="category">{{category.displayName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label class="date-placeholder">Choose a date</mat-label>
+    <input matInput [matDatepicker]="datePicker" formControlName="date" [min]="minDate">
+    <mat-datepicker-toggle [for]="datePicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #datePicker></mat-datepicker>
+  </mat-form-field>
+  <button class="btn-create width" (click)="onSubmit()" [disabled]="!taskForm.valid">CREATE</button>
+</form>

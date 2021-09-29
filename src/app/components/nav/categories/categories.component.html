@@ -1,0 +1,31 @@
+<span class="title">Categories</span>
+<div class="categories">
+  <ul class="cat-list">
+    <li class="cat-container"
+        *ngFor="let category of categories$ | async"
+        [routerLink]="[category.link]"
+    >
+      <span class="marker" [ngStyle]="{'background-color': category.color}"></span>
+      <span class="category">
+        {{category.displayName}}
+      </span>
+      <span class="delete" (click)="deleteCategory(category.id)">X</span>
+    </li>
+  </ul>
+  <span class="new-category" *ngIf="!isNewClicked; else newCategory" (click)="toggle()">
+    <span class="plus">+</span>
+    New Category
+  </span>
+  <ng-template #newCategory>
+    <div class="new-category">
+      <span class="plus" (click)="addCategory(input)">+</span>
+      <input class="cat-input"
+             type="text"
+             placeholder="New Category"
+             (keydown.enter)="$event.preventDefault();
+             addCategory(input)"
+             #input>
+      <span class="close" (click)="isNewClicked = false">x</span>
+    </div>
+  </ng-template>
+</div>

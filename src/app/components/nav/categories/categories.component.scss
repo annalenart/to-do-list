@@ -1,0 +1,100 @@
+@import "src/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  border-bottom: 2px solid $white;
+  margin-left: 40px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+
+.categories {
+  max-height: 400px;
+  overflow-y: auto;
+
+  @media(min-width: 768px) {
+    max-height: 800px;
+  }
+
+  .cat-list {
+    list-style: none;
+
+    .cat-container {
+      display: flex;
+      padding: 15px 40px;
+      cursor: pointer;
+
+      &:hover {
+        font-size: 18px;
+        background-color: $active;
+        font-weight: 500;
+        transition: all .3s;
+
+        .delete {
+          cursor: pointer;
+          display: block;
+          height: 100%;
+          width: 22px;
+          text-align: center;
+          margin-left: auto;
+        }
+      }
+
+      .marker {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        align-self: center;
+        margin-right: 10px;
+      }
+
+      .category {
+        max-width: 158px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .delete {
+        display: none;
+      }
+    }
+  }
+
+  .new-category {
+    cursor: pointer;
+    padding: 15px 40px 0;
+    display: flex;
+    align-items: center;
+    color: $gray-font;
+
+    .plus {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .close {
+      margin-bottom: auto;
+      font-size: 14px;
+    }
+
+    .cat-input {
+      width: 60%;
+      background: none;
+      border: none;
+      outline: none;
+      text-align: center;
+      font: inherit;
+
+      &::placeholder {
+        font-size: 12px;
+        color: $gray-font;
+      }
+    }
+  }
+}

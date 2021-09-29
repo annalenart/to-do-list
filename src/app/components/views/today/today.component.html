@@ -1,0 +1,5 @@
+<div class="header">
+  <span class="title">TODAY</span>
+  <span class="date">{{currentDate}}</span>
+</div>
+<app-tasks-list *ngIf="tasks$ | async as tasks" [categoryList]="tasks "></app-tasks-list>

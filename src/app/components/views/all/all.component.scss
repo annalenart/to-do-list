@@ -1,0 +1,13 @@
+@import '../../../../colors';
+
+:host {
+  overflow-y: scroll;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.hr {
+  border: 1px solid $bar-bac;
+}

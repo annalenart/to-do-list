@@ -1,0 +1,3 @@
+<ul class="views-list">
+  <li class="view" *ngFor="let view of views" [routerLink]="[view.link]" routerLinkActive="active">{{view.displayName}}</li>
+</ul>

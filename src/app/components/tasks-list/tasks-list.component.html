@@ -1,0 +1,4 @@
+<div class="tasks-list" *ngFor="let category of categoryListTest">
+  <span class="category">{{category.category}}</span>
+  <app-task *ngFor="let task of category.tasks" [task]="task" (queries)="trackTasksToDelete($event)"></app-task>
+</div>

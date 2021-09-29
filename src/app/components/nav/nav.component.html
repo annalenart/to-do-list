@@ -1,0 +1,10 @@
+<div class="nav" [class.nav-closed]="!isOpen">
+  <div class="container" *ngIf="isOpen">
+    <app-views></app-views>
+    <app-categories></app-categories>
+  </div>
+  <div class="menu-btn">
+    <img src="/assets/images/menu_black_24dp.svg" alt="menu-btn" width="30px" (click)="close()">
+    <img class="add-btn" src="/assets/images/add_black_24dp.svg" alt="add-btn" width="30px" [routerLink]="['/add']">
+  </div>
+</div>

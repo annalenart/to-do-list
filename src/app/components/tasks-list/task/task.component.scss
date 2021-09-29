@@ -1,0 +1,45 @@
+@import "src/colors";
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+  border-right: 8px solid;
+
+  .checkbox {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid $black;
+    border-radius: 3px;
+
+    &:checked {
+      border: 1px solid $light-gray-font;
+    }
+
+    &:checked::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border-right: 2px solid $light-gray-font;
+      border-bottom: 2px solid $light-gray-font;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateZ(40deg);
+    }
+
+    &:checked + .task-name {
+      text-decoration: line-through;
+      color: $light-gray-font;
+    }
+  }
+
+  &-name {
+    flex: 1;
+    font-size: 16px;
+  }
+}

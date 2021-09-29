@@ -1,0 +1,45 @@
+@import '../../../../colors';
+
+:host {
+  flex: 1;
+  margin-bottom: 50px;
+  padding: 0 20px;
+
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+    padding: 0 40px;
+  }
+}
+
+:host(.scroll) {
+  overflow-y: scroll;
+}
+
+.title {
+  display: block;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 24px;
+  padding: 20px 0 10px;
+
+  @media(min-width: 768px) {
+    font-size: 26px;
+    padding: 40px 0 25px;
+  }
+}
+
+.scheduled-container {
+  display: flex;
+  flex-direction: column;
+
+  .date {
+    background-color: $bar-bac;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+
+    @media(min-width: 768px) {
+      padding: 15px;
+    }
+  }
+}
