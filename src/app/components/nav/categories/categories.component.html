@@ -3,7 +3,7 @@
   <ul class="cat-list">
     <li class="cat-container"
         *ngFor="let category of categories$ | async"
-        [routerLink]="[category.link]"
+        [routerLink]="['category', category.link]"
     >
       <span class="marker" [ngStyle]="{'background-color': category.color}"></span>
       <span class="category">
