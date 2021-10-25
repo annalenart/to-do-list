@@ -1,2 +1,7 @@
 <span class="title">UNSCHEDULED</span>
-<app-tasks-list class="app-tasks-list" *ngIf="tasks$ | async as tasks" [categoryList]="tasks"></app-tasks-list>
+<ng-container *ngIf="tasks$ | async as tasks">
+  <app-tasks-list *ngIf="tasks.length > 0; else empty" [categoryList]="tasks"></app-tasks-list>
+</ng-container>
+<ng-template #empty>
+  <app-empty-info></app-empty-info>
+</ng-template>

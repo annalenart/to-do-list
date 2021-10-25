@@ -3,8 +3,12 @@
     <app-views></app-views>
     <app-categories></app-categories>
   </div>
-  <div class="menu-btn">
-    <img src="/assets/images/menu_black_24dp.svg" alt="menu-btn" width="30px" (click)="close()">
-    <img class="add-btn" src="/assets/images/add_black_24dp.svg" alt="add-btn" width="30px" [routerLink]="['/add']">
+  <div class="btns-container">
+    <button class="action-btn menu-btn">
+      <img src="assets/images/menu_black_24dp.svg" alt="menu-btn" width="30px" (click)="close()">
+    </button>
+    <button class="action-btn add-btn">
+      <img src="assets/images/add_black_24dp.svg" alt="add-btn" width="30px" [routerLink]="['/add']">
+    </button>
   </div>
 </div>

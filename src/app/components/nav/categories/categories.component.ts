@@ -23,7 +23,6 @@ export class CategoriesComponent implements OnInit {
 
   toggle(): void {
     this.isNewClicked = !this.isNewClicked;
-
   }
 
   addCategory(input: HTMLInputElement): void {
@@ -37,13 +36,13 @@ export class CategoriesComponent implements OnInit {
         color: CategoriesComponent.randomColor()
       };
       this.navProvider.addCategory(category).subscribe(() => this.navService.refreshCategories());
-
       input.value = '';
       this.isNewClicked = false;
     }
   }
 
-  deleteCategory(id: string) {
+  deleteCategory(event: MouseEvent, id: string) {
+    event.stopPropagation();
     this.navProvider.deleteCategory(id).subscribe(() => this.navService.refreshCategories());
   }
 
