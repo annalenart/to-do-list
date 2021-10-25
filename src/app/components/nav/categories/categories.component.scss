@@ -30,19 +30,17 @@
       cursor: pointer;
 
       &:hover {
-        font-size: 18px;
         background-color: $active;
-        font-weight: 500;
-        transition: all .3s;
 
         .delete {
-          cursor: pointer;
-          display: block;
-          height: 100%;
-          width: 22px;
+          display: flex;
           text-align: center;
           margin-left: auto;
         }
+      }
+
+      &.active {
+        background-color: $active;
       }
 
       .marker {
@@ -55,7 +53,6 @@
 
       .category {
         max-width: 158px;
-
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -73,14 +70,8 @@
     align-items: center;
     color: $gray-font;
 
-    .plus {
-      font-size: 24px;
-      margin-right: 10px;
-    }
-
-    .close {
-      margin-bottom: auto;
-      font-size: 14px;
+    .new {
+      margin-left: 5px;
     }
 
     .cat-input {
@@ -88,13 +79,16 @@
       background: none;
       border: none;
       outline: none;
-      text-align: center;
       font: inherit;
+      margin-left: 5px;
 
       &::placeholder {
-        font-size: 12px;
         color: $gray-font;
       }
+    }
+
+    .close-btn {
+      margin-left: auto;
     }
   }
 }

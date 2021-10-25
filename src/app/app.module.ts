@@ -23,6 +23,7 @@ import { TaskComponent } from './components/tasks-list/task/task.component';
 import { ScheduledComponent } from './components/views/scheduled/scheduled.component';
 import { UnscheduledComponent } from './components/views/unscheduled/unscheduled.component';
 import { AllComponent } from './components/views/all/all.component';
+import { EmptyInfoComponent } from './components/empty-info/empty-info.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AllComponent } from './components/views/all/all.component';
     ScheduledComponent,
     UnscheduledComponent,
     AllComponent,
+    EmptyInfoComponent,
   ],
   imports: [
     BrowserModule,

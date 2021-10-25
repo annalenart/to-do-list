@@ -4,28 +4,36 @@
     <li class="cat-container"
         *ngFor="let category of categories$ | async"
         [routerLink]="['category', category.link]"
-    >
+        routerLinkActive="active">
       <span class="marker" [ngStyle]="{'background-color': category.color}"></span>
       <span class="category">
         {{category.displayName}}
       </span>
-      <span class="delete" (click)="deleteCategory(category.id)">X</span>
+      <button class="action-btn delete" (click)="deleteCategory($event, category.id)">
+        <img src="assets/images/close_black_24dp.svg" alt="delete-btn" width="19px">
+      </button>
     </li>
   </ul>
-  <span class="new-category" *ngIf="!isNewClicked; else newCategory" (click)="toggle()">
-    <span class="plus">+</span>
-    New Category
-  </span>
+  <div class="new-category" *ngIf="!isNewClicked; else newCategory" (click)="toggle()">
+    <button class="action-btn">
+      <img src="assets/images/add_black_24dp.svg" alt="add-btn">
+    </button>
+    <span class="new">New Category</span>
+  </div>
   <ng-template #newCategory>
     <div class="new-category">
-      <span class="plus" (click)="addCategory(input)">+</span>
+      <button class="action-btn" (click)="addCategory(categoryInput)">
+        <img src="assets/images/add_black_24dp.svg" alt="add-btn">
+      </button>
       <input class="cat-input"
              type="text"
              placeholder="New Category"
              (keydown.enter)="$event.preventDefault();
-             addCategory(input)"
-             #input>
-      <span class="close" (click)="isNewClicked = false">x</span>
+             addCategory(categoryInput)"
+             #categoryInput>
+      <button class="action-btn close-btn" (click)="isNewClicked = false">
+        <img src="assets/images/close_black_24dp.svg" alt="close-btn" width="22px">
+      </button>
     </div>
   </ng-template>
 </div>
