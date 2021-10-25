@@ -1,7 +1,12 @@
 <span class="title">SCHEDULED</span>
 <ng-container *ngIf="daysList$ | async as daysList">
-  <div class="scheduled-container" *ngFor="let day of daysList">
-    <span class="date">{{day.date}}</span>
-    <app-tasks-list [categoryList]="day.tasks"></app-tasks-list>
-  </div>
+  <ng-container *ngIf="daysList.length > 0; else empty">
+    <div class="scheduled-container" *ngFor="let day of daysList">
+      <span class="date">{{day.date}}</span>
+      <app-tasks-list [categoryList]="day.tasks"></app-tasks-list>
+    </div>
+  </ng-container>
 </ng-container>
+<ng-template #empty>
+  <app-empty-info></app-empty-info>
+</ng-template>

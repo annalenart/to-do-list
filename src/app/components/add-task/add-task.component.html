@@ -1,4 +1,6 @@
-<img class="back-btn" src="/assets/images/close_black_24dp.svg" alt="close-btn" width="60px" [routerLink]="['..']">
+<button class="action-btn close-btn">
+  <img src="assets/images/close_black_24dp.svg" alt="close-btn" width="50px" [routerLink]="['..']">
+</button>
 <span class="title">New Task</span>
 <form class="form-container" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
@@ -21,5 +23,5 @@
     <mat-datepicker-toggle [for]="datePicker" matSuffix></mat-datepicker-toggle>
     <mat-datepicker #datePicker></mat-datepicker>
   </mat-form-field>
-  <button class="btn-create width" (click)="onSubmit()" [disabled]="!taskForm.valid">CREATE</button>
+  <button class="btn-create" (click)="onSubmit()" [disabled]="!taskForm.valid">CREATE</button>
 </form>

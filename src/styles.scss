@@ -15,3 +15,11 @@ body {
 }
 
 html, body { height: 100%; }
+
+.action-btn {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}

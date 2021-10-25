@@ -18,10 +18,10 @@
   }
 }
 
-.back-btn {
+.close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
 }
 
 .title {
@@ -40,6 +40,7 @@
   }
 
   .btn-create {
+    cursor: pointer;
     font: inherit;
     font-weight: 500;
     background-color: $btn;
